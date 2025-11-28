@@ -1,0 +1,65 @@
+
+/* style.css - Fit Life */
+:root{
+  --primary:#1e73be; /* trust blue */
+  --accent:#0b9d6b;  /* green for success */
+  --muted:#6b7280;
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --radius:12px;
+  --max-width:1100px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--font-sans);background:var(--bg);color:#0f172a}
+.container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+/* Header */
+.header{background:linear-gradient(90deg,rgba(30,115,190,0.07),transparent);backdrop-filter:saturate(120%);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#2ab0ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:0 6px 18px rgba(30,115,190,0.12)}
+.nav-links{display:flex;gap:14px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:8px}
+.nav-links a.cta{background:var(--primary);color:#fff;padding:10px 14px}
+.hamburger{display:none;border:none;background:none;font-size:22px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+.hero-card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.05)}
+.hero h1{margin:0;font-size:34px;line-height:1.05}
+.lead{color:var(--muted);margin-top:10px}
+.primary-cta{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+.secondary-cta{margin-left:10px;color:var(--primary);text-decoration:none;font-weight:600}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.feature{background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);padding:18px;border-radius:12px;border:1px solid rgba(15,23,42,0.03)}
+
+/* Testimonials */
+.testimonials{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.testimonial{background:linear-gradient(180deg,#fff, #f8fbff);padding:14px;border-radius:10px;border-left:4px solid var(--primary)}
+
+/* Cards and layout */
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(15,23,42,0.04)}
+
+/* Footer */
+.footer{margin-top:40px;padding:22px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(15,23,42,0.04)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; padding-bottom:10px}
+  .features,.testimonials{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hamburger{display:block}
+}
+
+/* Utility */
+.center{text-align:center}
+.small{font-size:0.94rem;color:var(--muted)}
+.meta{font-size:0.85rem;color:var(--muted);margin-top:8px}
+.form-row{display:flex;gap:10px}
+.input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);font-size:15px}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+.badge{display:inline-block;background:rgba(11,157,107,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600}
+.seo-note{font-size:0.85rem;color:var(--muted);margin-top:6px}
